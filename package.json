@@ -1,0 +1,81 @@
+{
+  "name": "boostrap-select-country-data",
+  "version": "1.0.0",
+  "description": "Bootstrap Select data helpers for countries, languages, timezones, US states, and UK counties with optional grouping and flag icons.",
+  "homepage": "https://github.com/TrilB-Dev/BS-Country-Data#readme",
+  "bugs": {
+    "url": "https://github.com/TrilB-Dev/BS-Country-Data/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrilB-Dev/BS-Country-Data.git"
+  },
+  "license": "MIT",
+  "author": "undefined",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "js/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "js/*.js",
+    "js/*.d.ts",
+    "json/*.json",
+    "dist/**/*",
+    "README.md"
+  ],
+  "keywords": [
+    "bootstrap-select",
+    "country-data",
+    "countries",
+    "states",
+    "counties",
+    "timezones",
+    "flags",
+    "selectpicker"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "test": "node -e \"const pkg=require('./index.js'); const assertCollection=(name, value)=>{ if (!value) throw new Error(name + ' failed'); const flat=Array.isArray(value)?value:Object.values(value||{}).flat(); if (!flat.length) throw new Error(name + ' failed'); }; const countries=pkg.countries({ include: pkg.include.countries(['Albania','Brunei','Iceland','Malta']) }); if (!countries.some((country)=>country.value==='AL')) throw new Error('country include filter failed'); const excludedCountries=pkg.countries({ exclude: pkg.exclude.countries(['Albania','Brunei']) }); if (excludedCountries.some((country)=>country.value==='AL' || country.value==='BN')) throw new Error('country exclude filter failed'); const languageSamples=pkg.countryLanguages(); const languageMatch=languageSamples.find((item)=>item.value==='fr_FR'||item.value==='en_US'||item.value==='de_AT'); if (!languageMatch || typeof languageMatch.value !== 'string' || !languageMatch.languageCode || !languageMatch.languageName) throw new Error('language option contract failed'); const languages=pkg.countryLanguages({ include: pkg.include.language(['fr_FR','en_US']) }); if (!languages.length) throw new Error('language include filter failed'); const tz=pkg.timezones({ include: pkg.include.timezones(['Europe/London']) }); if (!tz.some((zone)=>zone.value==='Europe/London')) throw new Error('timezone include filter failed'); const states=pkg.usStates({ include: pkg.include.states(['California']) }); if (!states.some((state)=>state.value==='California')) throw new Error('state include filter failed'); const counties=pkg.ukCounties({ include: pkg.include.counties(['Greater London']) }); if (!counties.some((county)=>county.value==='Greater London')) throw new Error('county include filter failed'); assertCollection('countries', pkg.countries({groupByRegion:true, includeFlags:true})); assertCollection('languages', pkg.countryLanguages({groupByRegion:true, includeFlags:true})); assertCollection('timezones', pkg.timezones({groupByContinent:true})); assertCollection('states', pkg.usStates({groupByRegion:true})); assertCollection('counties', pkg.ukCounties({groupByRegion:true})); console.log('bootstrap-select-country-data ok');\""
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-select": "^1.13.18",
+    "flag-icons": "^7.5.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "grunt": "^1.1.0",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-compress": "^1.6.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^22.0.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-version": "^2.0.0",
+    "load-grunt-tasks": "^5.1.0",
+    "sass": "^1.104.0",
+    "terser": "^5.51.2"
+  },
+  "browserslist": [
+    "Android 2.3",
+    "Android >= 4",
+    "Chrome >= 20",
+    "Firefox >= 24",
+    "Explorer >= 8",
+    "iOS >= 6",
+    "Opera >= 12",
+    "Safari >= 6"
+  ]
+}

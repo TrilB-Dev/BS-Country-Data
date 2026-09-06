@@ -1,0 +1,2648 @@
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) {
+    module.exports = factory();
+  } else {
+    root.BsCountryData = factory();
+  }
+}(typeof self !== 'undefined' ? self : this, function () {
+  const data = {
+  "countries": [
+    {
+      "name": "Afghanistan",
+      "codes": {
+        "alpha-2": "AF",
+        "language": "fa_AF",
+        "calling": "93"
+      },
+      "flag": "af",
+      "region": "Asia"
+    },
+    {
+      "name": "Albania",
+      "codes": {
+        "alpha-2": "AL",
+        "language": "sq_AL",
+        "calling": "355"
+      },
+      "flag": "al",
+      "region": "Europe"
+    },
+    {
+      "name": "Algeria",
+      "codes": {
+        "alpha-2": "DZ",
+        "language": "ar_DZ",
+        "calling": "213"
+      },
+      "flag": "dz",
+      "region": "Africa"
+    },
+    {
+      "name": "Andorra",
+      "codes": {
+        "alpha-2": "AD",
+        "language": "ca_AD",
+        "calling": "376"
+      },
+      "flag": "ad",
+      "region": "Europe"
+    },
+    {
+      "name": "Angola",
+      "codes": {
+        "alpha-2": "AO",
+        "language": "pt_AO",
+        "calling": "244"
+      },
+      "flag": "ao",
+      "region": "Africa"
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "codes": {
+        "alpha-2": "AG",
+        "language": "en_AG",
+        "calling": "1-268"
+      },
+      "flag": "ag",
+      "region": "North America"
+    },
+    {
+      "name": "Argentina",
+      "codes": {
+        "alpha-2": "AR",
+        "language": "es_AR",
+        "calling": "54"
+      },
+      "flag": "ar",
+      "region": "South America"
+    },
+    {
+      "name": "Armenia",
+      "codes": {
+        "alpha-2": "AM",
+        "language": "hy_AM",
+        "calling": "374"
+      },
+      "flag": "am",
+      "region": "Asia"
+    },
+    {
+      "name": "Australia",
+      "codes": {
+        "alpha-2": "AU",
+        "language": "en_AU",
+        "calling": "61"
+      },
+      "flag": "au",
+      "region": "Oceania"
+    },
+    {
+      "name": "Austria",
+      "codes": {
+        "alpha-2": "AT",
+        "language": "de_AT",
+        "calling": "43"
+      },
+      "flag": "at",
+      "region": "Europe"
+    },
+    {
+      "name": "Azerbaijan",
+      "codes": {
+        "alpha-2": "AZ",
+        "language": "az_AZ",
+        "calling": "994"
+      },
+      "flag": "az",
+      "region": "Asia"
+    },
+    {
+      "name": "Bahamas",
+      "codes": {
+        "alpha-2": "BS",
+        "language": "en_BS",
+        "calling": "1-242"
+      },
+      "flag": "bs",
+      "region": "North America"
+    },
+    {
+      "name": "Bahrain",
+      "codes": {
+        "alpha-2": "BH",
+        "language": "ar_BH",
+        "calling": "973"
+      },
+      "flag": "bh",
+      "region": "Asia"
+    },
+    {
+      "name": "Bangladesh",
+      "codes": {
+        "alpha-2": "BD",
+        "language": "bn_BD",
+        "calling": "880"
+      },
+      "flag": "bd",
+      "region": "Asia"
+    },
+    {
+      "name": "Barbados",
+      "codes": {
+        "alpha-2": "BB",
+        "language": "en_BB",
+        "calling": "1-246"
+      },
+      "flag": "bb",
+      "region": "North America"
+    },
+    {
+      "name": "Belarus",
+      "codes": {
+        "alpha-2": "BY",
+        "language": "be_BY",
+        "calling": "375"
+      },
+      "flag": "by",
+      "region": "Europe"
+    },
+    {
+      "name": "Belgium",
+      "codes": {
+        "alpha-2": "BE",
+        "language": "nl_BE",
+        "calling": "32"
+      },
+      "flag": "be",
+      "region": "Europe"
+    },
+    {
+      "name": "Belize",
+      "codes": {
+        "alpha-2": "BZ",
+        "language": "en_BZ",
+        "calling": "501"
+      },
+      "flag": "bz",
+      "region": "North America"
+    },
+    {
+      "name": "Benin",
+      "codes": {
+        "alpha-2": "BJ",
+        "language": "fr_BJ",
+        "calling": "229"
+      },
+      "flag": "bj",
+      "region": "Africa"
+    },
+    {
+      "name": "Bhutan",
+      "codes": {
+        "alpha-2": "BT",
+        "language": "dz_BT",
+        "calling": "975"
+      },
+      "flag": "bt",
+      "region": "Asia"
+    },
+    {
+      "name": "Bolivia",
+      "codes": {
+        "alpha-2": "BO",
+        "language": "es_BO",
+        "calling": "591"
+      },
+      "flag": "bo",
+      "region": "South America"
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "codes": {
+        "alpha-2": "BA",
+        "language": "bs_BA",
+        "calling": "387"
+      },
+      "flag": "ba",
+      "region": "Europe"
+    },
+    {
+      "name": "Botswana",
+      "codes": {
+        "alpha-2": "BW",
+        "language": "en_BW",
+        "calling": "267"
+      },
+      "flag": "bw",
+      "region": "Africa"
+    },
+    {
+      "name": "Brazil",
+      "codes": {
+        "alpha-2": "BR",
+        "language": "pt_BR",
+        "calling": "55"
+      },
+      "flag": "br",
+      "region": "South America"
+    },
+    {
+      "name": "Brunei",
+      "codes": {
+        "alpha-2": "BN",
+        "language": "ms_BN",
+        "calling": "673"
+      },
+      "flag": "bn",
+      "region": "Asia"
+    },
+    {
+      "name": "Bulgaria",
+      "codes": {
+        "alpha-2": "BG",
+        "language": "bg_BG",
+        "calling": "359"
+      },
+      "flag": "bg",
+      "region": "Europe"
+    },
+    {
+      "name": "Burkina Faso",
+      "codes": {
+        "alpha-2": "BF",
+        "language": "fr_BF",
+        "calling": "226"
+      },
+      "flag": "bf",
+      "region": "Africa"
+    },
+    {
+      "name": "Burundi",
+      "codes": {
+        "alpha-2": "BI",
+        "language": "fr_BI",
+        "calling": "257"
+      },
+      "flag": "bi",
+      "region": "Africa"
+    },
+    {
+      "name": "Cabo Verde",
+      "codes": {
+        "alpha-2": "CV",
+        "language": "pt_CV",
+        "calling": "238"
+      },
+      "flag": "cv",
+      "region": "Africa"
+    },
+    {
+      "name": "Cambodia",
+      "codes": {
+        "alpha-2": "KH",
+        "language": "km_KH",
+        "calling": "855"
+      },
+      "flag": "kh",
+      "region": "Asia"
+    },
+    {
+      "name": "Cameroon",
+      "codes": {
+        "alpha-2": "CM",
+        "language": "fr_CM",
+        "calling": "237"
+      },
+      "flag": "cm",
+      "region": "Africa"
+    },
+    {
+      "name": "Canada",
+      "codes": {
+        "alpha-2": "CA",
+        "language": "en_CA",
+        "calling": "1"
+      },
+      "flag": "ca",
+      "region": "North America"
+    },
+    {
+      "name": "Central African Republic",
+      "codes": {
+        "alpha-2": "CF",
+        "language": "fr_CF",
+        "calling": "236"
+      },
+      "flag": "cf",
+      "region": "Africa"
+    },
+    {
+      "name": "Chad",
+      "codes": {
+        "alpha-2": "TD",
+        "language": "fr_TD",
+        "calling": "235"
+      },
+      "flag": "td",
+      "region": "Africa"
+    },
+    {
+      "name": "Chile",
+      "codes": {
+        "alpha-2": "CL",
+        "language": "es_CL",
+        "calling": "56"
+      },
+      "flag": "cl",
+      "region": "South America"
+    },
+    {
+      "name": "China",
+      "codes": {
+        "alpha-2": "CN",
+        "language": "zh_CN",
+        "calling": "86"
+      },
+      "flag": "cn",
+      "region": "Asia"
+    },
+    {
+      "name": "Colombia",
+      "codes": {
+        "alpha-2": "CO",
+        "language": "es_CO",
+        "calling": "57"
+      },
+      "flag": "co",
+      "region": "South America"
+    },
+    {
+      "name": "Comoros",
+      "codes": {
+        "alpha-2": "KM",
+        "language": "ar_KM",
+        "calling": "269"
+      },
+      "flag": "km",
+      "region": "Africa"
+    },
+    {
+      "name": "Congo",
+      "codes": {
+        "alpha-2": "CG",
+        "language": "fr_CG",
+        "calling": "242"
+      },
+      "flag": "cg",
+      "region": "Africa"
+    },
+    {
+      "name": "Costa Rica",
+      "codes": {
+        "alpha-2": "CR",
+        "language": "es_CR",
+        "calling": "506"
+      },
+      "flag": "cr",
+      "region": "North America"
+    },
+    {
+      "name": "Croatia",
+      "codes": {
+        "alpha-2": "HR",
+        "language": "hr_HR",
+        "calling": "385"
+      },
+      "flag": "hr",
+      "region": "Europe"
+    },
+    {
+      "name": "Cuba",
+      "codes": {
+        "alpha-2": "CU",
+        "language": "es_CU",
+        "calling": "53"
+      },
+      "flag": "cu",
+      "region": "North America"
+    },
+    {
+      "name": "Cyprus",
+      "codes": {
+        "alpha-2": "CY",
+        "language": "el_CY",
+        "calling": "357"
+      },
+      "flag": "cy",
+      "region": "Asia"
+    },
+    {
+      "name": "Czechia",
+      "codes": {
+        "alpha-2": "CZ",
+        "language": "cs_CZ",
+        "calling": "420"
+      },
+      "flag": "cz",
+      "region": "Europe"
+    },
+    {
+      "name": "Democratic Republic of the Congo",
+      "codes": {
+        "alpha-2": "CD",
+        "language": "fr_CD",
+        "calling": "243"
+      },
+      "flag": "cd",
+      "region": "Africa"
+    },
+    {
+      "name": "Denmark",
+      "codes": {
+        "alpha-2": "DK",
+        "language": "da_DK",
+        "calling": "45"
+      },
+      "flag": "dk",
+      "region": "Europe"
+    },
+    {
+      "name": "Djibouti",
+      "codes": {
+        "alpha-2": "DJ",
+        "language": "fr_DJ",
+        "calling": "253"
+      },
+      "flag": "dj",
+      "region": "Africa"
+    },
+    {
+      "name": "Dominica",
+      "codes": {
+        "alpha-2": "DM",
+        "language": "en_DM",
+        "calling": "1-767"
+      },
+      "flag": "dm",
+      "region": "North America"
+    },
+    {
+      "name": "Dominican Republic",
+      "codes": {
+        "alpha-2": "DO",
+        "language": "es_DO",
+        "calling": "1-809"
+      },
+      "flag": "do",
+      "region": "North America"
+    },
+    {
+      "name": "Ecuador",
+      "codes": {
+        "alpha-2": "EC",
+        "language": "es_EC",
+        "calling": "593"
+      },
+      "flag": "ec",
+      "region": "South America"
+    },
+    {
+      "name": "Egypt",
+      "codes": {
+        "alpha-2": "EG",
+        "language": "ar_EG",
+        "calling": "20"
+      },
+      "flag": "eg",
+      "region": "Africa"
+    },
+    {
+      "name": "El Salvador",
+      "codes": {
+        "alpha-2": "SV",
+        "language": "es_SV",
+        "calling": "503"
+      },
+      "flag": "sv",
+      "region": "North America"
+    },
+    {
+      "name": "Equatorial Guinea",
+      "codes": {
+        "alpha-2": "GQ",
+        "language": "es_GQ",
+        "calling": "240"
+      },
+      "flag": "gq",
+      "region": "Africa"
+    },
+    {
+      "name": "Eritrea",
+      "codes": {
+        "alpha-2": "ER",
+        "language": "ti_ER",
+        "calling": "291"
+      },
+      "flag": "er",
+      "region": "Africa"
+    },
+    {
+      "name": "Estonia",
+      "codes": {
+        "alpha-2": "EE",
+        "language": "et_EE",
+        "calling": "372"
+      },
+      "flag": "ee",
+      "region": "Europe"
+    },
+    {
+      "name": "Eswatini",
+      "codes": {
+        "alpha-2": "SZ",
+        "language": "en_SZ",
+        "calling": "268"
+      },
+      "flag": "sz",
+      "region": "Africa"
+    },
+    {
+      "name": "Ethiopia",
+      "codes": {
+        "alpha-2": "ET",
+        "language": "am_ET",
+        "calling": "251"
+      },
+      "flag": "et",
+      "region": "Africa"
+    },
+    {
+      "name": "Fiji",
+      "codes": {
+        "alpha-2": "FJ",
+        "language": "en_FJ",
+        "calling": "679"
+      },
+      "flag": "fj",
+      "region": "Oceania"
+    },
+    {
+      "name": "Finland",
+      "codes": {
+        "alpha-2": "FI",
+        "language": "fi_FI",
+        "calling": "358"
+      },
+      "flag": "fi",
+      "region": "Europe"
+    },
+    {
+      "name": "France",
+      "codes": {
+        "alpha-2": "FR",
+        "language": "fr_FR",
+        "calling": "33"
+      },
+      "flag": "fr",
+      "region": "Europe"
+    },
+    {
+      "name": "Gabon",
+      "codes": {
+        "alpha-2": "GA",
+        "language": "fr_GA",
+        "calling": "241"
+      },
+      "flag": "ga",
+      "region": "Africa"
+    },
+    {
+      "name": "Gambia",
+      "codes": {
+        "alpha-2": "GM",
+        "language": "en_GM",
+        "calling": "220"
+      },
+      "flag": "gm",
+      "region": "Africa"
+    },
+    {
+      "name": "Georgia",
+      "codes": {
+        "alpha-2": "GE",
+        "language": "ka_GE",
+        "calling": "995"
+      },
+      "flag": "ge",
+      "region": "Asia"
+    },
+    {
+      "name": "Germany",
+      "codes": {
+        "alpha-2": "DE",
+        "language": "de_DE",
+        "calling": "49"
+      },
+      "flag": "de",
+      "region": "Europe"
+    },
+    {
+      "name": "Ghana",
+      "codes": {
+        "alpha-2": "GH",
+        "language": "en_GH",
+        "calling": "233"
+      },
+      "flag": "gh",
+      "region": "Africa"
+    },
+    {
+      "name": "Greece",
+      "codes": {
+        "alpha-2": "GR",
+        "language": "el_GR",
+        "calling": "30"
+      },
+      "flag": "gr",
+      "region": "Europe"
+    },
+    {
+      "name": "Grenada",
+      "codes": {
+        "alpha-2": "GD",
+        "language": "en_GD",
+        "calling": "1-473"
+      },
+      "flag": "gd",
+      "region": "North America"
+    },
+    {
+      "name": "Guatemala",
+      "codes": {
+        "alpha-2": "GT",
+        "language": "es_GT",
+        "calling": "502"
+      },
+      "flag": "gt",
+      "region": "North America"
+    },
+    {
+      "name": "Guinea",
+      "codes": {
+        "alpha-2": "GN",
+        "language": "fr_GN",
+        "calling": "224"
+      },
+      "flag": "gn",
+      "region": "Africa"
+    },
+    {
+      "name": "Guinea-Bissau",
+      "codes": {
+        "alpha-2": "GW",
+        "language": "pt_GW",
+        "calling": "245"
+      },
+      "flag": "gw",
+      "region": "Africa"
+    },
+    {
+      "name": "Guyana",
+      "codes": {
+        "alpha-2": "GY",
+        "language": "en_GY",
+        "calling": "592"
+      },
+      "flag": "gy",
+      "region": "South America"
+    },
+    {
+      "name": "Haiti",
+      "codes": {
+        "alpha-2": "HT",
+        "language": "fr_HT",
+        "calling": "509"
+      },
+      "flag": "ht",
+      "region": "North America"
+    },
+    {
+      "name": "Honduras",
+      "codes": {
+        "alpha-2": "HN",
+        "language": "es_HN",
+        "calling": "504"
+      },
+      "flag": "hn",
+      "region": "North America"
+    },
+    {
+      "name": "Hungary",
+      "codes": {
+        "alpha-2": "HU",
+        "language": "hu_HU",
+        "calling": "36"
+      },
+      "flag": "hu",
+      "region": "Europe"
+    },
+    {
+      "name": "Iceland",
+      "codes": {
+        "alpha-2": "IS",
+        "language": "is_IS",
+        "calling": "354"
+      },
+      "flag": "is",
+      "region": "Europe"
+    },
+    {
+      "name": "India",
+      "codes": {
+        "alpha-2": "IN",
+        "language": "hi_IN",
+        "calling": "91"
+      },
+      "flag": "in",
+      "region": "Asia"
+    },
+    {
+      "name": "Indonesia",
+      "codes": {
+        "alpha-2": "ID",
+        "language": "id_ID",
+        "calling": "62"
+      },
+      "flag": "id",
+      "region": "Asia"
+    },
+    {
+      "name": "Iran",
+      "codes": {
+        "alpha-2": "IR",
+        "language": "fa_IR",
+        "calling": "98"
+      },
+      "flag": "ir",
+      "region": "Asia"
+    },
+    {
+      "name": "Iraq",
+      "codes": {
+        "alpha-2": "IQ",
+        "language": "ar_IQ",
+        "calling": "964"
+      },
+      "flag": "iq",
+      "region": "Asia"
+    },
+    {
+      "name": "Ireland",
+      "codes": {
+        "alpha-2": "IE",
+        "language": "en_IE",
+        "calling": "353"
+      },
+      "flag": "ie",
+      "region": "Europe"
+    },
+    {
+      "name": "Israel",
+      "codes": {
+        "alpha-2": "IL",
+        "language": "he_IL",
+        "calling": "972"
+      },
+      "flag": "il",
+      "region": "Asia"
+    },
+    {
+      "name": "Italy",
+      "codes": {
+        "alpha-2": "IT",
+        "language": "it_IT",
+        "calling": "39"
+      },
+      "flag": "it",
+      "region": "Europe"
+    },
+    {
+      "name": "Jamaica",
+      "codes": {
+        "alpha-2": "JM",
+        "language": "en_JM",
+        "calling": "1-876"
+      },
+      "flag": "jm",
+      "region": "North America"
+    },
+    {
+      "name": "Japan",
+      "codes": {
+        "alpha-2": "JP",
+        "language": "ja_JP",
+        "calling": "81"
+      },
+      "flag": "jp",
+      "region": "Asia"
+    },
+    {
+      "name": "Jordan",
+      "codes": {
+        "alpha-2": "JO",
+        "language": "ar_JO",
+        "calling": "962"
+      },
+      "flag": "jo",
+      "region": "Asia"
+    },
+    {
+      "name": "Kazakhstan",
+      "codes": {
+        "alpha-2": "KZ",
+        "language": "kk_KZ",
+        "calling": "7"
+      },
+      "flag": "kz",
+      "region": "Asia"
+    },
+    {
+      "name": "Kenya",
+      "codes": {
+        "alpha-2": "KE",
+        "language": "en_KE",
+        "calling": "254"
+      },
+      "flag": "ke",
+      "region": "Africa"
+    },
+    {
+      "name": "Kiribati",
+      "codes": {
+        "alpha-2": "KI",
+        "language": "en_KI",
+        "calling": "686"
+      },
+      "flag": "ki",
+      "region": "Oceania"
+    },
+    {
+      "name": "Kuwait",
+      "codes": {
+        "alpha-2": "KW",
+        "language": "ar_KW",
+        "calling": "965"
+      },
+      "flag": "kw",
+      "region": "Asia"
+    },
+    {
+      "name": "Kyrgyzstan",
+      "codes": {
+        "alpha-2": "KG",
+        "language": "ky_KG",
+        "calling": "996"
+      },
+      "flag": "kg",
+      "region": "Asia"
+    },
+    {
+      "name": "Laos",
+      "codes": {
+        "alpha-2": "LA",
+        "language": "lo_LA",
+        "calling": "856"
+      },
+      "flag": "la",
+      "region": "Asia"
+    },
+    {
+      "name": "Latvia",
+      "codes": {
+        "alpha-2": "LV",
+        "language": "lv_LV",
+        "calling": "371"
+      },
+      "flag": "lv",
+      "region": "Europe"
+    },
+    {
+      "name": "Lebanon",
+      "codes": {
+        "alpha-2": "LB",
+        "language": "ar_LB",
+        "calling": "961"
+      },
+      "flag": "lb",
+      "region": "Asia"
+    },
+    {
+      "name": "Lesotho",
+      "codes": {
+        "alpha-2": "LS",
+        "language": "en_LS",
+        "calling": "266"
+      },
+      "flag": "ls",
+      "region": "Africa"
+    },
+    {
+      "name": "Liberia",
+      "codes": {
+        "alpha-2": "LR",
+        "language": "en_LR",
+        "calling": "231"
+      },
+      "flag": "lr",
+      "region": "Africa"
+    },
+    {
+      "name": "Libya",
+      "codes": {
+        "alpha-2": "LY",
+        "language": "ar_LY",
+        "calling": "218"
+      },
+      "flag": "ly",
+      "region": "Africa"
+    },
+    {
+      "name": "Liechtenstein",
+      "codes": {
+        "alpha-2": "LI",
+        "language": "de_LI",
+        "calling": "423"
+      },
+      "flag": "li",
+      "region": "Europe"
+    },
+    {
+      "name": "Lithuania",
+      "codes": {
+        "alpha-2": "LT",
+        "language": "lt_LT",
+        "calling": "370"
+      },
+      "flag": "lt",
+      "region": "Europe"
+    },
+    {
+      "name": "Luxembourg",
+      "codes": {
+        "alpha-2": "LU",
+        "language": "fr_LU",
+        "calling": "352"
+      },
+      "flag": "lu",
+      "region": "Europe"
+    },
+    {
+      "name": "Madagascar",
+      "codes": {
+        "alpha-2": "MG",
+        "language": "fr_MG",
+        "calling": "261"
+      },
+      "flag": "mg",
+      "region": "Africa"
+    },
+    {
+      "name": "Malawi",
+      "codes": {
+        "alpha-2": "MW",
+        "language": "en_MW",
+        "calling": "265"
+      },
+      "flag": "mw",
+      "region": "Africa"
+    },
+    {
+      "name": "Malaysia",
+      "codes": {
+        "alpha-2": "MY",
+        "language": "ms_MY",
+        "calling": "60"
+      },
+      "flag": "my",
+      "region": "Asia"
+    },
+    {
+      "name": "Maldives",
+      "codes": {
+        "alpha-2": "MV",
+        "language": "dv_MV",
+        "calling": "960"
+      },
+      "flag": "mv",
+      "region": "Asia"
+    },
+    {
+      "name": "Mali",
+      "codes": {
+        "alpha-2": "ML",
+        "language": "fr_ML",
+        "calling": "223"
+      },
+      "flag": "ml",
+      "region": "Africa"
+    },
+    {
+      "name": "Malta",
+      "codes": {
+        "alpha-2": "MT",
+        "language": "mt_MT",
+        "calling": "356"
+      },
+      "flag": "mt",
+      "region": "Europe"
+    },
+    {
+      "name": "Marshall Islands",
+      "codes": {
+        "alpha-2": "MH",
+        "language": "en_MH",
+        "calling": "692"
+      },
+      "flag": "mh",
+      "region": "Oceania"
+    },
+    {
+      "name": "Mauritania",
+      "codes": {
+        "alpha-2": "MR",
+        "language": "ar_MR",
+        "calling": "222"
+      },
+      "flag": "mr",
+      "region": "Africa"
+    },
+    {
+      "name": "Mauritius",
+      "codes": {
+        "alpha-2": "MU",
+        "language": "en_MU",
+        "calling": "230"
+      },
+      "flag": "mu",
+      "region": "Africa"
+    },
+    {
+      "name": "Mexico",
+      "codes": {
+        "alpha-2": "MX",
+        "language": "es_MX",
+        "calling": "52"
+      },
+      "flag": "mx",
+      "region": "North America"
+    },
+    {
+      "name": "Micronesia",
+      "codes": {
+        "alpha-2": "FM",
+        "language": "en_FM",
+        "calling": "691"
+      },
+      "flag": "fm",
+      "region": "Oceania"
+    },
+    {
+      "name": "Moldova",
+      "codes": {
+        "alpha-2": "MD",
+        "language": "ro_MD",
+        "calling": "373"
+      },
+      "flag": "md",
+      "region": "Europe"
+    },
+    {
+      "name": "Monaco",
+      "codes": {
+        "alpha-2": "MC",
+        "language": "fr_MC",
+        "calling": "377"
+      },
+      "flag": "mc",
+      "region": "Europe"
+    },
+    {
+      "name": "Mongolia",
+      "codes": {
+        "alpha-2": "MN",
+        "language": "mn_MN",
+        "calling": "976"
+      },
+      "flag": "mn",
+      "region": "Asia"
+    },
+    {
+      "name": "Montenegro",
+      "codes": {
+        "alpha-2": "ME",
+        "language": "sr_ME",
+        "calling": "382"
+      },
+      "flag": "me",
+      "region": "Europe"
+    },
+    {
+      "name": "Morocco",
+      "codes": {
+        "alpha-2": "MA",
+        "language": "ar_MA",
+        "calling": "212"
+      },
+      "flag": "ma",
+      "region": "Africa"
+    },
+    {
+      "name": "Mozambique",
+      "codes": {
+        "alpha-2": "MZ",
+        "language": "pt_MZ",
+        "calling": "258"
+      },
+      "flag": "mz",
+      "region": "Africa"
+    },
+    {
+      "name": "Myanmar",
+      "codes": {
+        "alpha-2": "MM",
+        "language": "my_MM",
+        "calling": "95"
+      },
+      "flag": "mm",
+      "region": "Asia"
+    },
+    {
+      "name": "Namibia",
+      "codes": {
+        "alpha-2": "NA",
+        "language": "en_NA",
+        "calling": "264"
+      },
+      "flag": "na",
+      "region": "Africa"
+    },
+    {
+      "name": "Nauru",
+      "codes": {
+        "alpha-2": "NR",
+        "language": "en_NR",
+        "calling": "674"
+      },
+      "flag": "nr",
+      "region": "Oceania"
+    },
+    {
+      "name": "Nepal",
+      "codes": {
+        "alpha-2": "NP",
+        "language": "ne_NP",
+        "calling": "977"
+      },
+      "flag": "np",
+      "region": "Asia"
+    },
+    {
+      "name": "Netherlands",
+      "codes": {
+        "alpha-2": "NL",
+        "language": "nl_NL",
+        "calling": "31"
+      },
+      "flag": "nl",
+      "region": "Europe"
+    },
+    {
+      "name": "New Zealand",
+      "codes": {
+        "alpha-2": "NZ",
+        "language": "en_NZ",
+        "calling": "64"
+      },
+      "flag": "nz",
+      "region": "Oceania"
+    },
+    {
+      "name": "Nicaragua",
+      "codes": {
+        "alpha-2": "NI",
+        "language": "es_NI",
+        "calling": "505"
+      },
+      "flag": "ni",
+      "region": "North America"
+    },
+    {
+      "name": "Niger",
+      "codes": {
+        "alpha-2": "NE",
+        "language": "fr_NE",
+        "calling": "227"
+      },
+      "flag": "ne",
+      "region": "Africa"
+    },
+    {
+      "name": "Nigeria",
+      "codes": {
+        "alpha-2": "NG",
+        "language": "en_NG",
+        "calling": "234"
+      },
+      "flag": "ng",
+      "region": "Africa"
+    },
+    {
+      "name": "North Korea",
+      "codes": {
+        "alpha-2": "KP",
+        "language": "ko_KP",
+        "calling": "850"
+      },
+      "flag": "kp",
+      "region": "Asia"
+    },
+    {
+      "name": "North Macedonia",
+      "codes": {
+        "alpha-2": "MK",
+        "language": "mk_MK",
+        "calling": "389"
+      },
+      "flag": "mk",
+      "region": "Europe"
+    },
+    {
+      "name": "Norway",
+      "codes": {
+        "alpha-2": "NO",
+        "language": "nb_NO",
+        "calling": "47"
+      },
+      "flag": "no",
+      "region": "Europe"
+    },
+    {
+      "name": "Oman",
+      "codes": {
+        "alpha-2": "OM",
+        "language": "ar_OM",
+        "calling": "968"
+      },
+      "flag": "om",
+      "region": "Asia"
+    },
+    {
+      "name": "Pakistan",
+      "codes": {
+        "alpha-2": "PK",
+        "language": "ur_PK",
+        "calling": "92"
+      },
+      "flag": "pk",
+      "region": "Asia"
+    },
+    {
+      "name": "Palau",
+      "codes": {
+        "alpha-2": "PW",
+        "language": "en_PW",
+        "calling": "680"
+      },
+      "flag": "pw",
+      "region": "Oceania"
+    },
+    {
+      "name": "Panama",
+      "codes": {
+        "alpha-2": "PA",
+        "language": "es_PA",
+        "calling": "507"
+      },
+      "flag": "pa",
+      "region": "North America"
+    },
+    {
+      "name": "Papua New Guinea",
+      "codes": {
+        "alpha-2": "PG",
+        "language": "en_PG",
+        "calling": "675"
+      },
+      "flag": "pg",
+      "region": "Oceania"
+    },
+    {
+      "name": "Paraguay",
+      "codes": {
+        "alpha-2": "PY",
+        "language": "es_PY",
+        "calling": "595"
+      },
+      "flag": "py",
+      "region": "South America"
+    },
+    {
+      "name": "Peru",
+      "codes": {
+        "alpha-2": "PE",
+        "language": "es_PE",
+        "calling": "51"
+      },
+      "flag": "pe",
+      "region": "South America"
+    },
+    {
+      "name": "Philippines",
+      "codes": {
+        "alpha-2": "PH",
+        "language": "en_PH",
+        "calling": "63"
+      },
+      "flag": "ph",
+      "region": "Asia"
+    },
+    {
+      "name": "Poland",
+      "codes": {
+        "alpha-2": "PL",
+        "language": "pl_PL",
+        "calling": "48"
+      },
+      "flag": "pl",
+      "region": "Europe"
+    },
+    {
+      "name": "Portugal",
+      "codes": {
+        "alpha-2": "PT",
+        "language": "pt_PT",
+        "calling": "351"
+      },
+      "flag": "pt",
+      "region": "Europe"
+    },
+    {
+      "name": "Qatar",
+      "codes": {
+        "alpha-2": "QA",
+        "language": "ar_QA",
+        "calling": "974"
+      },
+      "flag": "qa",
+      "region": "Asia"
+    },
+    {
+      "name": "Romania",
+      "codes": {
+        "alpha-2": "RO",
+        "language": "ro_RO",
+        "calling": "40"
+      },
+      "flag": "ro",
+      "region": "Europe"
+    },
+    {
+      "name": "Russia",
+      "codes": {
+        "alpha-2": "RU",
+        "language": "ru_RU",
+        "calling": "7"
+      },
+      "flag": "ru",
+      "region": "Europe"
+    },
+    {
+      "name": "Rwanda",
+      "codes": {
+        "alpha-2": "RW",
+        "language": "rw_RW",
+        "calling": "250"
+      },
+      "flag": "rw",
+      "region": "Africa"
+    },
+    {
+      "name": "Saint Kitts and Nevis",
+      "codes": {
+        "alpha-2": "KN",
+        "language": "en_KN",
+        "calling": "1-869"
+      },
+      "flag": "kn",
+      "region": "North America"
+    },
+    {
+      "name": "Saint Lucia",
+      "codes": {
+        "alpha-2": "LC",
+        "language": "en_LC",
+        "calling": "1-758"
+      },
+      "flag": "lc",
+      "region": "North America"
+    },
+    {
+      "name": "Saint Vincent and the Grenadines",
+      "codes": {
+        "alpha-2": "VC",
+        "language": "en_VC",
+        "calling": "1-784"
+      },
+      "flag": "vc",
+      "region": "North America"
+    },
+    {
+      "name": "Samoa",
+      "codes": {
+        "alpha-2": "WS",
+        "language": "sm_WS",
+        "calling": "685"
+      },
+      "flag": "ws",
+      "region": "Oceania"
+    },
+    {
+      "name": "San Marino",
+      "codes": {
+        "alpha-2": "SM",
+        "language": "it_SM",
+        "calling": "378"
+      },
+      "flag": "sm",
+      "region": "Europe"
+    },
+    {
+      "name": "Sao Tome and Principe",
+      "codes": {
+        "alpha-2": "ST",
+        "language": "pt_ST",
+        "calling": "239"
+      },
+      "flag": "st",
+      "region": "Africa"
+    },
+    {
+      "name": "Saudi Arabia",
+      "codes": {
+        "alpha-2": "SA",
+        "language": "ar_SA",
+        "calling": "966"
+      },
+      "flag": "sa",
+      "region": "Asia"
+    },
+    {
+      "name": "Senegal",
+      "codes": {
+        "alpha-2": "SN",
+        "language": "fr_SN",
+        "calling": "221"
+      },
+      "flag": "sn",
+      "region": "Africa"
+    },
+    {
+      "name": "Serbia",
+      "codes": {
+        "alpha-2": "RS",
+        "language": "sr_RS",
+        "calling": "381"
+      },
+      "flag": "rs",
+      "region": "Europe"
+    },
+    {
+      "name": "Seychelles",
+      "codes": {
+        "alpha-2": "SC",
+        "language": "fr_SC",
+        "calling": "248"
+      },
+      "flag": "sc",
+      "region": "Africa"
+    },
+    {
+      "name": "Sierra Leone",
+      "codes": {
+        "alpha-2": "SL",
+        "language": "en_SL",
+        "calling": "232"
+      },
+      "flag": "sl",
+      "region": "Africa"
+    },
+    {
+      "name": "Singapore",
+      "codes": {
+        "alpha-2": "SG",
+        "language": "en_SG",
+        "calling": "65"
+      },
+      "flag": "sg",
+      "region": "Asia"
+    },
+    {
+      "name": "Slovakia",
+      "codes": {
+        "alpha-2": "SK",
+        "language": "sk_SK",
+        "calling": "421"
+      },
+      "flag": "sk",
+      "region": "Europe"
+    },
+    {
+      "name": "Slovenia",
+      "codes": {
+        "alpha-2": "SI",
+        "language": "sl_SI",
+        "calling": "386"
+      },
+      "flag": "si",
+      "region": "Europe"
+    },
+    {
+      "name": "Solomon Islands",
+      "codes": {
+        "alpha-2": "SB",
+        "language": "en_SB",
+        "calling": "677"
+      },
+      "flag": "sb",
+      "region": "Oceania"
+    },
+    {
+      "name": "Somalia",
+      "codes": {
+        "alpha-2": "SO",
+        "language": "so_SO",
+        "calling": "252"
+      },
+      "flag": "so",
+      "region": "Africa"
+    },
+    {
+      "name": "South Africa",
+      "codes": {
+        "alpha-2": "ZA",
+        "language": "en_ZA",
+        "calling": "27"
+      },
+      "flag": "za",
+      "region": "Africa"
+    },
+    {
+      "name": "South Korea",
+      "codes": {
+        "alpha-2": "KR",
+        "language": "ko_KR",
+        "calling": "82"
+      },
+      "flag": "kr",
+      "region": "Asia"
+    },
+    {
+      "name": "South Sudan",
+      "codes": {
+        "alpha-2": "SS",
+        "language": "en_SS",
+        "calling": "211"
+      },
+      "flag": "ss",
+      "region": "Africa"
+    },
+    {
+      "name": "Spain",
+      "codes": {
+        "alpha-2": "ES",
+        "language": "es_ES",
+        "calling": "34"
+      },
+      "flag": "es",
+      "region": "Europe"
+    },
+    {
+      "name": "Sri Lanka",
+      "codes": {
+        "alpha-2": "LK",
+        "language": "si_LK",
+        "calling": "94"
+      },
+      "flag": "lk",
+      "region": "Asia"
+    },
+    {
+      "name": "Sudan",
+      "codes": {
+        "alpha-2": "SD",
+        "language": "ar_SD",
+        "calling": "249"
+      },
+      "flag": "sd",
+      "region": "Africa"
+    },
+    {
+      "name": "Suriname",
+      "codes": {
+        "alpha-2": "SR",
+        "language": "nl_SR",
+        "calling": "597"
+      },
+      "flag": "sr",
+      "region": "South America"
+    },
+    {
+      "name": "Sweden",
+      "codes": {
+        "alpha-2": "SE",
+        "language": "sv_SE",
+        "calling": "46"
+      },
+      "flag": "se",
+      "region": "Europe"
+    },
+    {
+      "name": "Switzerland",
+      "codes": {
+        "alpha-2": "CH",
+        "language": "de_CH",
+        "calling": "41"
+      },
+      "flag": "ch",
+      "region": "Europe"
+    },
+    {
+      "name": "Syria",
+      "codes": {
+        "alpha-2": "SY",
+        "language": "ar_SY",
+        "calling": "963"
+      },
+      "flag": "sy",
+      "region": "Asia"
+    },
+    {
+      "name": "Tajikistan",
+      "codes": {
+        "alpha-2": "TJ",
+        "language": "tg_TJ",
+        "calling": "992"
+      },
+      "flag": "tj",
+      "region": "Asia"
+    },
+    {
+      "name": "Tanzania",
+      "codes": {
+        "alpha-2": "TZ",
+        "language": "sw_TZ",
+        "calling": "255"
+      },
+      "flag": "tz",
+      "region": "Africa"
+    },
+    {
+      "name": "Thailand",
+      "codes": {
+        "alpha-2": "TH",
+        "language": "th_TH",
+        "calling": "66"
+      },
+      "flag": "th",
+      "region": "Asia"
+    },
+    {
+      "name": "Timor-Leste",
+      "codes": {
+        "alpha-2": "TL",
+        "language": "pt_TL",
+        "calling": "670"
+      },
+      "flag": "tl",
+      "region": "Asia"
+    },
+    {
+      "name": "Togo",
+      "codes": {
+        "alpha-2": "TG",
+        "language": "fr_TG",
+        "calling": "228"
+      },
+      "flag": "tg",
+      "region": "Africa"
+    },
+    {
+      "name": "Tonga",
+      "codes": {
+        "alpha-2": "TO",
+        "language": "en_TO",
+        "calling": "676"
+      },
+      "flag": "to",
+      "region": "Oceania"
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "codes": {
+        "alpha-2": "TT",
+        "language": "en_TT",
+        "calling": "1-868"
+      },
+      "flag": "tt",
+      "region": "North America"
+    },
+    {
+      "name": "Tunisia",
+      "codes": {
+        "alpha-2": "TN",
+        "language": "ar_TN",
+        "calling": "216"
+      },
+      "flag": "tn",
+      "region": "Africa"
+    },
+    {
+      "name": "Turkey",
+      "codes": {
+        "alpha-2": "TR",
+        "language": "tr_TR",
+        "calling": "90"
+      },
+      "flag": "tr",
+      "region": "Asia"
+    },
+    {
+      "name": "Turkmenistan",
+      "codes": {
+        "alpha-2": "TM",
+        "language": "tk_TM",
+        "calling": "993"
+      },
+      "flag": "tm",
+      "region": "Asia"
+    },
+    {
+      "name": "Tuvalu",
+      "codes": {
+        "alpha-2": "TV",
+        "language": "en_TV",
+        "calling": "688"
+      },
+      "flag": "tv",
+      "region": "Oceania"
+    },
+    {
+      "name": "Uganda",
+      "codes": {
+        "alpha-2": "UG",
+        "language": "en_UG",
+        "calling": "256"
+      },
+      "flag": "ug",
+      "region": "Africa"
+    },
+    {
+      "name": "Ukraine",
+      "codes": {
+        "alpha-2": "UA",
+        "language": "uk_UA",
+        "calling": "380"
+      },
+      "flag": "ua",
+      "region": "Europe"
+    },
+    {
+      "name": "United Arab Emirates",
+      "codes": {
+        "alpha-2": "AE",
+        "language": "ar_AE",
+        "calling": "971"
+      },
+      "flag": "ae",
+      "region": "Asia"
+    },
+    {
+      "name": "United Kingdom",
+      "codes": {
+        "alpha-2": "GB",
+        "language": "en_GB",
+        "calling": "44"
+      },
+      "flag": "gb",
+      "region": "Europe"
+    },
+    {
+      "name": "United States",
+      "codes": {
+        "alpha-2": "US",
+        "language": "en_US",
+        "calling": "1"
+      },
+      "flag": "us",
+      "region": "North America"
+    },
+    {
+      "name": "Uruguay",
+      "codes": {
+        "alpha-2": "UY",
+        "language": "es_UY",
+        "calling": "598"
+      },
+      "flag": "uy",
+      "region": "South America"
+    },
+    {
+      "name": "Uzbekistan",
+      "codes": {
+        "alpha-2": "UZ",
+        "language": "uz_UZ",
+        "calling": "998"
+      },
+      "flag": "uz",
+      "region": "Asia"
+    },
+    {
+      "name": "Vanuatu",
+      "codes": {
+        "alpha-2": "VU",
+        "language": "bi_VU",
+        "calling": "678"
+      },
+      "flag": "vu",
+      "region": "Oceania"
+    },
+    {
+      "name": "Vatican City",
+      "codes": {
+        "alpha-2": "VA",
+        "language": "la_VA",
+        "calling": "39"
+      },
+      "flag": "va",
+      "region": "Europe"
+    },
+    {
+      "name": "Venezuela",
+      "codes": {
+        "alpha-2": "VE",
+        "language": "es_VE",
+        "calling": "58"
+      },
+      "flag": "ve",
+      "region": "South America"
+    },
+    {
+      "name": "Vietnam",
+      "codes": {
+        "alpha-2": "VN",
+        "language": "vi_VN",
+        "calling": "84"
+      },
+      "flag": "vn",
+      "region": "Asia"
+    },
+    {
+      "name": "Yemen",
+      "codes": {
+        "alpha-2": "YE",
+        "language": "ar_YE",
+        "calling": "967"
+      },
+      "flag": "ye",
+      "region": "Asia"
+    },
+    {
+      "name": "Zambia",
+      "codes": {
+        "alpha-2": "ZM",
+        "language": "en_ZM",
+        "calling": "260"
+      },
+      "flag": "zm",
+      "region": "Africa"
+    },
+    {
+      "name": "Zimbabwe",
+      "codes": {
+        "alpha-2": "ZW",
+        "language": "en_ZW",
+        "calling": "263"
+      },
+      "flag": "zw",
+      "region": "Africa"
+    },
+    {
+      "name": "State of Palestine",
+      "codes": {
+        "alpha-2": "PS",
+        "language": "ar_PS",
+        "calling": "970"
+      },
+      "flag": "ps",
+      "region": "Asia"
+    }
+  ],
+  "timezones": {
+    "Africa": [
+      {
+        "iana": "Africa/Abidjan",
+        "standard_offset": "UTC+00:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Africa/Addis_Ababa",
+        "standard_offset": "UTC+03:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Africa/Algiers",
+        "standard_offset": "UTC+01:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Africa/Cairo",
+        "standard_offset": "UTC+02:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Africa/Casablanca",
+        "standard_offset": "UTC+01:00",
+        "dst_offset": "UTC+02:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Africa/Johannesburg",
+        "standard_offset": "UTC+02:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Africa/Nairobi",
+        "standard_offset": "UTC+03:00",
+        "dst_offset": null,
+        "dst_observed": false
+      }
+    ],
+    "America": [
+      {
+        "iana": "America/New_York",
+        "standard_offset": "UTC-05:00",
+        "dst_offset": "UTC-04:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "America/Chicago",
+        "standard_offset": "UTC-06:00",
+        "dst_offset": "UTC-05:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "America/Denver",
+        "standard_offset": "UTC-07:00",
+        "dst_offset": "UTC-06:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "America/Los_Angeles",
+        "standard_offset": "UTC-08:00",
+        "dst_offset": "UTC-07:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "America/Phoenix",
+        "standard_offset": "UTC-07:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "America/Anchorage",
+        "standard_offset": "UTC-09:00",
+        "dst_offset": "UTC-08:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "America/Honolulu",
+        "standard_offset": "UTC-10:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "America/Toronto",
+        "standard_offset": "UTC-05:00",
+        "dst_offset": "UTC-04:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "America/Vancouver",
+        "standard_offset": "UTC-08:00",
+        "dst_offset": "UTC-07:00",
+        "dst_observed": true
+      }
+    ],
+    "Antarctica": [
+      {
+        "iana": "Antarctica/Casey",
+        "standard_offset": "UTC+11:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Antarctica/Davis",
+        "standard_offset": "UTC+07:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Antarctica/Mawson",
+        "standard_offset": "UTC+05:00",
+        "dst_offset": null,
+        "dst_observed": false
+      }
+    ],
+    "Asia": [
+      {
+        "iana": "Asia/Tokyo",
+        "standard_offset": "UTC+09:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Asia/Seoul",
+        "standard_offset": "UTC+09:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Asia/Shanghai",
+        "standard_offset": "UTC+08:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Asia/Hong_Kong",
+        "standard_offset": "UTC+08:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Asia/Kolkata",
+        "standard_offset": "UTC+05:30",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Asia/Kathmandu",
+        "standard_offset": "UTC+05:45",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Asia/Dubai",
+        "standard_offset": "UTC+04:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Asia/Jerusalem",
+        "standard_offset": "UTC+02:00",
+        "dst_offset": "UTC+03:00",
+        "dst_observed": true
+      }
+    ],
+    "Atlantic": [
+      {
+        "iana": "Atlantic/Azores",
+        "standard_offset": "UTC-01:00",
+        "dst_offset": "UTC+00:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Atlantic/Canary",
+        "standard_offset": "UTC+00:00",
+        "dst_offset": "UTC+01:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Atlantic/Reykjavik",
+        "standard_offset": "UTC+00:00",
+        "dst_offset": null,
+        "dst_observed": false
+      }
+    ],
+    "Australia": [
+      {
+        "iana": "Australia/Sydney",
+        "standard_offset": "UTC+10:00",
+        "dst_offset": "UTC+11:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Australia/Melbourne",
+        "standard_offset": "UTC+10:00",
+        "dst_offset": "UTC+11:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Australia/Brisbane",
+        "standard_offset": "UTC+10:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Australia/Perth",
+        "standard_offset": "UTC+08:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Australia/Adelaide",
+        "standard_offset": "UTC+09:30",
+        "dst_offset": "UTC+10:30",
+        "dst_observed": true
+      },
+      {
+        "iana": "Australia/Darwin",
+        "standard_offset": "UTC+09:30",
+        "dst_offset": null,
+        "dst_observed": false
+      }
+    ],
+    "Europe": [
+      {
+        "iana": "Europe/London",
+        "standard_offset": "UTC+00:00",
+        "dst_offset": "UTC+01:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Europe/Dublin",
+        "standard_offset": "UTC+00:00",
+        "dst_offset": "UTC+01:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Europe/Paris",
+        "standard_offset": "UTC+01:00",
+        "dst_offset": "UTC+02:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Europe/Berlin",
+        "standard_offset": "UTC+01:00",
+        "dst_offset": "UTC+02:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Europe/Madrid",
+        "standard_offset": "UTC+01:00",
+        "dst_offset": "UTC+02:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Europe/Rome",
+        "standard_offset": "UTC+01:00",
+        "dst_offset": "UTC+02:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Europe/Oslo",
+        "standard_offset": "UTC+01:00",
+        "dst_offset": "UTC+02:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Europe/Helsinki",
+        "standard_offset": "UTC+02:00",
+        "dst_offset": "UTC+03:00",
+        "dst_observed": true
+      }
+    ],
+    "Indian": [
+      {
+        "iana": "Indian/Mauritius",
+        "standard_offset": "UTC+04:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Indian/Maldives",
+        "standard_offset": "UTC+05:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Indian/Reunion",
+        "standard_offset": "UTC+04:00",
+        "dst_offset": null,
+        "dst_observed": false
+      }
+    ],
+    "Pacific": [
+      {
+        "iana": "Pacific/Auckland",
+        "standard_offset": "UTC+12:00",
+        "dst_offset": "UTC+13:00",
+        "dst_observed": true
+      },
+      {
+        "iana": "Pacific/Fiji",
+        "standard_offset": "UTC+12:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Pacific/Honolulu",
+        "standard_offset": "UTC-10:00",
+        "dst_offset": null,
+        "dst_observed": false
+      },
+      {
+        "iana": "Pacific/Tahiti",
+        "standard_offset": "UTC-10:00",
+        "dst_offset": null,
+        "dst_observed": false
+      }
+    ]
+  },
+  "usStates": [
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "Florida",
+    "Georgia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
+  ],
+  "ukCounties": {
+    "England": {
+      "North West": [
+        "Cheshire",
+        "Cumbria",
+        "Lancashire",
+        "Greater Manchester",
+        "Merseyside"
+      ],
+      "North East": [
+        "County Durham",
+        "Northumberland",
+        "Tyne and Wear"
+      ],
+      "Yorkshire and the Humber": [
+        "Yorkshire",
+        "North Yorkshire",
+        "South Yorkshire",
+        "West Yorkshire",
+        "East Riding of Yorkshire"
+      ],
+      "East Anglia": [
+        "Norfolk",
+        "Suffolk",
+        "Cambridgeshire",
+        "Essex",
+        "Bedfordshire",
+        "Hertfordshire"
+      ],
+      "East Midlands": [
+        "Derbyshire",
+        "Leicestershire",
+        "Lincolnshire",
+        "Northamptonshire",
+        "Nottinghamshire",
+        "Rutland"
+      ],
+      "West Midlands": [
+        "Herefordshire",
+        "Shropshire",
+        "Staffordshire",
+        "Warwickshire",
+        "West Midlands",
+        "Worcestershire"
+      ],
+      "London": [
+        "Greater London",
+        "Middlesex"
+      ],
+      "South West": [
+        "Cornwall",
+        "Devon",
+        "Dorset",
+        "Gloucestershire",
+        "Somerset",
+        "Wiltshire"
+      ],
+      "South East": [
+        "Berkshire",
+        "Buckinghamshire",
+        "East Sussex",
+        "West Sussex",
+        "Hampshire",
+        "Isle of Wight",
+        "Kent",
+        "Oxfordshire",
+        "Surrey",
+        "Sussex"
+      ]
+    },
+    "Scotland": [
+      "Aberdeenshire",
+      "Angus",
+      "Argyll",
+      "Ayrshire",
+      "Banffshire",
+      "Berwickshire",
+      "Caithness",
+      "Clackmannanshire",
+      "Dumfriesshire",
+      "Dunbartonshire",
+      "East Lothian",
+      "Fife",
+      "Inverness-shire",
+      "Kincardineshire",
+      "Lanarkshire",
+      "Moray",
+      "Orkney",
+      "Peeblesshire",
+      "Perthshire",
+      "Renfrewshire",
+      "Ross-shire",
+      "Roxburghshire",
+      "Selkirkshire",
+      "Shetland",
+      "Stirlingshire",
+      "Sutherland",
+      "West Lothian",
+      "Wigtownshire"
+    ],
+    "Wales": [
+      "Anglesey",
+      "Cardiganshire",
+      "Carmarthenshire",
+      "Clwyd",
+      "Denbighshire",
+      "Flintshire",
+      "Glamorgan",
+      "Gwent",
+      "Gwynedd",
+      "Mid Glamorgan",
+      "Powys",
+      "South Glamorgan",
+      "West Glamorgan"
+    ],
+    "Northern Ireland": [
+      "County Antrim",
+      "County Armagh",
+      "County Down",
+      "County Fermanagh",
+      "County Londonderry",
+      "County Tyrone"
+    ]
+  }
+};
+
+  function normalizeFlagCode(flag) {
+    return String(flag || '').trim().toLowerCase();
+  }
+
+  function getFlagUrl(flag) {
+    const code = normalizeFlagCode(flag);
+    if (!code) return null;
+    return 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.5.0/flags/4x3/' + code + '.svg';
+  }
+
+  function toSelectOption(value, label, extra) {
+    return Object.assign({ value: value, label: label, text: label }, extra || {});
+  }
+
+  function flattenGroupedOptions(value) {
+    if (Array.isArray(value)) return value;
+    if (!value || typeof value !== 'object') return [];
+
+    return Object.values(value).reduce(function (all, group) {
+      if (Array.isArray(group)) {
+        all.push.apply(all, group);
+        return all;
+      }
+
+      if (group && typeof group === 'object') {
+        all.push.apply(all, Object.values(group));
+      }
+
+      return all;
+    }, []);
+  }
+
+  function buildCountryData(options) {
+    options = options || {};
+    const groupByRegion = !!options.groupByRegion;
+    const includeFlags = !!options.includeFlags;
+    const includeCallingCode = !!options.includeCallingCode;
+    const includeLanguage = !!options.includeLanguage;
+    const includeAlpha2 = !!options.includeAlpha2;
+
+    const items = data.countries.map(function (country) {
+      const flagCode = normalizeFlagCode(country.flag);
+      const option = toSelectOption(
+        country.codes && country.codes['alpha-2'] ? country.codes['alpha-2'] : country.name,
+        country.name,
+        {
+          region: country.region || null,
+          flag: flagCode || null,
+          flagUrl: includeFlags && flagCode ? getFlagUrl(flagCode) : null,
+          alpha2: country.codes && country.codes['alpha-2'] ? country.codes['alpha-2'] : null,
+          language: country.codes && country.codes.language ? country.codes.language : null,
+          callingCode: country.codes && country.codes.calling ? country.codes.calling : null
+        }
+      );
+
+      if (includeAlpha2) option.alpha2 = option.alpha2;
+      if (includeLanguage) option.language = option.language;
+      if (includeCallingCode) option.callingCode = option.callingCode;
+      if (!includeFlags) option.flagUrl = null;
+
+      return option;
+    });
+
+    if (!groupByRegion) return items;
+
+    return items.reduce(function (groups, item) {
+      const region = item.region || 'Other';
+      if (!groups[region]) groups[region] = [];
+      groups[region].push(item);
+      return groups;
+    }, {});
+  }
+
+  function buildCountryLanguageData(options) {
+    options = options || {};
+    const groupByRegion = !!options.groupByRegion;
+    const includeFlags = !!options.includeFlags;
+
+    const items = data.countries.map(function (country) {
+      const alpha2 = country.codes && country.codes['alpha-2'] ? country.codes['alpha-2'] : null;
+      const locale = country.codes && country.codes.language ? country.codes.language : alpha2;
+      const flagCode = normalizeFlagCode(country.flag);
+
+      return toSelectOption(
+        locale || country.name,
+        country.name + ' (' + (locale || alpha2 || 'N/A') + ')',
+        {
+          region: country.region || null,
+          flag: flagCode || null,
+          flagUrl: includeFlags && flagCode ? getFlagUrl(flagCode) : null,
+          country: country.name,
+          countryCode: alpha2,
+          languageCode: locale
+        }
+      );
+    });
+
+    if (!groupByRegion) return items;
+
+    return items.reduce(function (groups, item) {
+      const region = item.region || 'Other';
+      if (!groups[region]) groups[region] = [];
+      groups[region].push(item);
+      return groups;
+    }, {});
+  }
+
+  function buildTimezoneData(options) {
+    options = options || {};
+    const groupByContinent = !!options.groupByContinent;
+
+    const items = Object.entries(data.timezones).reduce(function (all, entry) {
+      const continent = entry[0];
+      const zones = entry[1] || [];
+      zones.forEach(function (zone) {
+        all.push(toSelectOption(zone.iana, zone.iana + ' (' + (zone.standard_offset || 'UTC') + ')', {
+          continent: continent,
+          iana: zone.iana,
+          standardOffset: zone.standard_offset,
+          dstOffset: zone.dst_offset,
+          dstObserved: Boolean(zone.dst_observed)
+        }));
+      });
+      return all;
+    }, []);
+
+    if (!groupByContinent) return items;
+
+    return items.reduce(function (groups, item) {
+      const continent = item.continent || 'Other';
+      if (!groups[continent]) groups[continent] = [];
+      groups[continent].push(item);
+      return groups;
+    }, {});
+  }
+
+  function buildUsStatesData(options) {
+    options = options || {};
+    const groupByRegion = !!options.groupByRegion;
+    const items = data.usStates.map(function (state) {
+      return toSelectOption(state, state, { label: state });
+    });
+
+    if (!groupByRegion) return items;
+    return { 'US States': items };
+  }
+
+  function buildUkCountyData(options) {
+    options = options || {};
+    const groupByRegion = !!options.groupByRegion;
+    const items = [];
+
+    Object.entries(data.ukCounties).forEach(function (entry) {
+      const region = entry[0];
+      const counties = entry[1];
+
+      if (Array.isArray(counties)) {
+        counties.forEach(function (county) {
+          items.push(toSelectOption(county, county, { region: region }));
+        });
+        return;
+      }
+
+      Object.entries(counties || {}).forEach(function (subEntry) {
+        const subRegion = subEntry[0];
+        const names = subEntry[1] || [];
+
+        names.forEach(function (county) {
+          items.push(toSelectOption(county, county, { region: region, subRegion: subRegion }));
+        });
+      });
+    });
+
+    if (!groupByRegion) return items;
+
+    return items.reduce(function (groups, item) {
+      const region = item.region || 'Other';
+      if (!groups[region]) groups[region] = [];
+      groups[region].push(item);
+      return groups;
+    }, {});
+  }
+
+  return {
+    countries: buildCountryData,
+    countryLanguages: buildCountryLanguageData,
+    timezones: buildTimezoneData,
+    usStates: buildUsStatesData,
+    ukCounties: buildUkCountyData,
+    flattenGroupedOptions: flattenGroupedOptions,
+    getFlagUrl: getFlagUrl,
+    data: data
+  };
+}));

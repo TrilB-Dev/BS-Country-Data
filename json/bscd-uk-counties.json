@@ -1,0 +1,127 @@
+{
+  "England": {
+    "North West": [
+      "Cheshire",
+      "Cumbria",
+      "Lancashire",
+      "Greater Manchester",
+      "Merseyside"
+    ],
+    "North East": [
+      "County Durham",
+      "Northumberland",
+      "Tyne and Wear"
+    ],
+    "Yorkshire and the Humber": [
+      "Yorkshire",
+      "North Yorkshire",
+      "South Yorkshire",
+      "West Yorkshire",
+      "East Riding of Yorkshire"
+    ],
+    "East Anglia": [
+      "Norfolk",
+      "Suffolk",
+      "Cambridgeshire",
+      "Essex",
+      "Bedfordshire",
+      "Hertfordshire"
+    ],
+    "East Midlands": [
+      "Derbyshire",
+      "Leicestershire",
+      "Lincolnshire",
+      "Northamptonshire",
+      "Nottinghamshire",
+      "Rutland"
+    ],
+    "West Midlands": [
+      "Herefordshire",
+      "Shropshire",
+      "Staffordshire",
+      "Warwickshire",
+      "West Midlands",
+      "Worcestershire"
+    ],
+    "London": [
+      "Greater London",
+      "Middlesex"
+    ],
+    "South West": [
+      "Cornwall",
+      "Devon",
+      "Dorset",
+      "Gloucestershire",
+      "Somerset",
+      "Wiltshire"
+    ],
+    "South East": [
+      "Berkshire",
+      "Buckinghamshire",
+      "East Sussex",
+      "West Sussex",
+      "Hampshire",
+      "Isle of Wight",
+      "Kent",
+      "Oxfordshire",
+      "Surrey",
+      "Sussex"
+    ]
+  },
+
+  "Scotland": [
+    "Aberdeenshire",
+    "Angus",
+    "Argyll",
+    "Ayrshire",
+    "Banffshire",
+    "Berwickshire",
+    "Caithness",
+    "Clackmannanshire",
+    "Dumfriesshire",
+    "Dunbartonshire",
+    "East Lothian",
+    "Fife",
+    "Inverness-shire",
+    "Kincardineshire",
+    "Lanarkshire",
+    "Moray",
+    "Orkney",
+    "Peeblesshire",
+    "Perthshire",
+    "Renfrewshire",
+    "Ross-shire",
+    "Roxburghshire",
+    "Selkirkshire",
+    "Shetland",
+    "Stirlingshire",
+    "Sutherland",
+    "West Lothian",
+    "Wigtownshire"
+  ],
+
+  "Wales": [
+    "Anglesey",
+    "Cardiganshire",
+    "Carmarthenshire",
+    "Clwyd",
+    "Denbighshire",
+    "Flintshire",
+    "Glamorgan",
+    "Gwent",
+    "Gwynedd",
+    "Mid Glamorgan",
+    "Powys",
+    "South Glamorgan",
+    "West Glamorgan"
+  ],
+
+  "Northern Ireland": [
+    "County Antrim",
+    "County Armagh",
+    "County Down",
+    "County Fermanagh",
+    "County Londonderry",
+    "County Tyrone"
+  ]
+}
