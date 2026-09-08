@@ -69,7 +69,6 @@ The `data-bscd-type` attribute accepts:
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.5.0/css/flag-icons.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js"></script>
@@ -106,6 +105,60 @@ const timezones = bsData.timezones({
 const states = bsData.usStates({ groupByRegion: true });
 const counties = bsData.ukCounties({ groupByRegion: true });
 ```
+
+## Filtering with include and exclude
+
+The library supports optional filtering via `include` and `exclude` groups. This is useful when you want to limit a dataset to a specific region, language, country, or county set.
+
+```js
+const europeOnly = bsData.countries({
+  include: {
+    region: ['Europe'],
+  },
+  groupByRegion: true,
+});
+
+const englishAndFrench = bsData.countryLanguages({
+  include: {
+    language: ['English', 'French'],
+  },
+  groupByRegion: true,
+});
+
+const ukCountiesWithoutLondon = bsData.ukCounties({
+  groupByRegion: true,
+  exclude: {
+    counties: ['Greater London'],
+  },
+});
+```
+
+You can also combine filters by field:
+
+```js
+const usAndCanada = bsData.countries({
+  include: {
+    countries: ['United States', 'Canada'],
+  },
+});
+
+const nonEuropeanCountries = bsData.countries({
+  exclude: {
+    region: ['Europe'],
+  },
+});
+```
+
+### Supported filter keys
+
+- `countries` / `country`
+- `regions` / `region`
+- `languages` / `language`
+- `timezones` / `timezone`
+- `counties` / `county`
+- `states` / `state`
+- `alpha2`
+- `phoneCodes` / `phoneCode`
 
 ## Notes
 

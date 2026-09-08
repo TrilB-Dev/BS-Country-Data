@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Select Country Data Demo</title>
+        
+    
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="assets/bs-country-data/css/bs-country-data.min.css" />
+
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="assets/bs-country-data/js/bs-country-data.js"></script>
+
+    <style>
+      body {
+        background: #f5f7fb;
+        color: #1b1f2a;
+      }
+
+      .demo-card {
+        background: #fff;
+        border: 1px solid #e9edf5;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .demo-card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+
+
+      .demo-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Bootstrap Select Country Data</h1>
+        <p class="lead text-muted mb-0">
+          A demo page showing country, language, timezone, state, and county data with bootstrap-select and multi-select support.
+        </p>
+      </div>
+
+      <div class="demo-grid">
+        <div class="demo-card">
+          <h2>Countries with flags & grouping</h2>
+          <select
+            data-live-search="true"
+            data-bscd-type="country"
+            data-bscd-group="true"
+            data-bscd-flags="true"
+          >
+            <option value="">Select a country</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>Countries multi-select</h2>
+          <select
+            multiple
+            data-live-search="true"
+            data-actions-box="true"
+            data-selected-text-format="count > 3"
+            data-bscd-type="country"
+            data-bscd-flags="true"
+          >
+            <option value="">Select countries</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>Phone Codes with flags & grouping</h2>
+          <select
+            data-live-search="true"
+            data-actions-box="true"
+            data-selected-text-format="count > 3"
+            data-bscd-type="country-phone"
+            data-bscd-flags="true"
+          >
+            <option value="">Select code</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>Phone Codes multi-select with flags & grouping</h2>
+          <select
+            multiple
+            data-live-search="true"
+            data-actions-box="true"
+            data-selected-text-format="count > 3"
+            data-bscd-type="country-phone"
+            data-bscd-flags="true"
+          >
+            <option value="">Select code</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>Languages</h2>
+          <select
+            data-live-search="true"
+            data-bscd-type="language"
+            data-bscd-group="true"
+            data-bscd-flags="true"
+          >
+            <option value="">Select a language</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>Language multi-select</h2>
+          <select
+            multiple
+            data-live-search="true"
+            data-actions-box="true"
+            data-selected-text-format="count > 2"
+            data-bscd-type="language"
+            data-bscd-flags="true"
+          >
+            <option value="">Select languages</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>Timezones</h2>
+          <select
+            data-live-search="true"
+            data-bscd-type="timezones"
+          >
+            <option value="">Select a timezone</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>Timezones multi-select</h2>
+          <select
+            multiple
+            data-live-search="true"
+            data-actions-box="true"
+            data-bscd-type="timezones"
+            data-bscd-group="true"
+          >
+            <option value="">Select timezones</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>US States</h2>
+          <select
+            data-live-search="true"
+            data-bscd-type="us-states"
+          >
+            <option value="">Select a state</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>US States multi-select</h2>
+          <select
+            multiple
+            data-live-search="true"
+            data-actions-box="true"
+            data-bscd-type="us-states"
+          >
+            <option value="">Select states</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>UK Counties</h2>
+          <select
+            data-live-search="true"
+            data-bscd-type="uk-counties"
+            data-bscd-group="false"
+          >
+            <option value="">Select a county</option>
+          </select>
+        </div>
+
+        <div class="demo-card">
+          <h2>UK Counties multi-select</h2>
+          <select
+            multiple
+            data-live-search="true"
+            data-actions-box="true"
+            data-bscd-type="uk-counties"
+            data-bscd-group="true"
+          >
+            <option value="">Select counties</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
