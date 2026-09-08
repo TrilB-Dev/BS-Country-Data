@@ -14,7 +14,7 @@ It piggybacks directly on the Bootstrap 5 and bootstrap-select UI stack and supp
 ## Installation
 
 ```bash
-npm install boostrap-select-country-data
+npm install @trilbdev/boostrap-select-country-data
 ```
 
 This package installs the required dependencies automatically:
@@ -86,7 +86,7 @@ The script will automatically populate matching selects when they have `data-bsc
 ## JavaScript API
 
 ```js
-const bsData = require('boostrap-select-country-data');
+const bsData = require('@trilbdev/boostrap-select-country-data');
 
 const countries = bsData.countries({
   groupByRegion: true,
