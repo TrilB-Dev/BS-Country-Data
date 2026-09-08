@@ -1,1 +1,3 @@
-docs/demos/assets/*
+.vscode/
+
+./docs/demo/assets/*
