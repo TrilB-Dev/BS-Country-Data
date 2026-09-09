@@ -1,1 +1,1 @@
-module.exports = require('./js/index.js');
+module.exports = require('./dist/js/bs-country-data.js');

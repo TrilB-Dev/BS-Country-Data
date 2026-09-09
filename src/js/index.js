@@ -32,17 +32,18 @@
     root.BsCountryData = factory();
   }
 })(typeof self !== 'undefined' ? self : this, function () {
+  const embeddedData = typeof __BSCountryDataEmbeddedData !== 'undefined' ? __BSCountryDataEmbeddedData : null;
   let countriesData = [];
   let timezonesData = [];
   let ukCountiesData = [];
   let usStatesData = [];
 
   try {
-    if (typeof require === 'function') {
-      countriesData = require('../json/bscd-countries.json');
-      timezonesData = require('../json/bscd-timezones.json');
-      ukCountiesData = require('../json/bscd-uk-counties.json');
-      usStatesData = require('../json/bscd-usa-states.json');
+    if (embeddedData) {
+      countriesData = embeddedData.countries || [];
+      timezonesData = embeddedData.timezones || [];
+      ukCountiesData = embeddedData.ukCounties || [];
+      usStatesData = embeddedData.usStates || [];
     }
   } catch (error) {
     countriesData = [];
@@ -52,54 +53,6 @@
   }
 
   const defaultFlagBase = 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.5.0/flags/4x3';
-
-  function resolveJsonUrl(fileName) {
-    if (typeof document !== 'undefined') {
-      const script = document.currentScript || Array.from(document.querySelectorAll('script')).find((node) => {
-        return /bs-country-data(?:\.min)?\.js/i.test(node.getAttribute('src') || '');
-      });
-
-      if (script && script.getAttribute('src')) {
-        const scriptUrl = new URL(script.getAttribute('src'), window.location.href);
-        const scriptBase = scriptUrl.href.substring(0, scriptUrl.href.lastIndexOf('/') + 1);
-        return new URL('../json/' + fileName, scriptBase).href;
-      }
-    }
-
-    if (typeof window !== 'undefined' && window.location && window.location.href) {
-      return new URL('./assets/bs-country-data/json/' + fileName, window.location.href).href;
-    }
-
-    return './dist/json/' + fileName;
-  }
-
-  function loadJsonFile(fileName) {
-    const globalData = typeof root !== 'undefined' && root.BsCountryDataData ? root.BsCountryDataData : null;
-    const fallbackMap = globalData || {};
-
-    if (fallbackMap && fallbackMap.countries && fileName === 'bscd-countries.json') return fallbackMap.countries;
-    if (fallbackMap && fallbackMap.timezones && fileName === 'bscd-timezones.json') return fallbackMap.timezones;
-    if (fallbackMap && fallbackMap.usStates && fileName === 'bscd-usa-states.json') return fallbackMap.usStates;
-    if (fallbackMap && fallbackMap.ukCounties && fileName === 'bscd-uk-counties.json') return fallbackMap.ukCounties;
-
-    if (typeof window !== 'undefined' && window.location && window.location.protocol === 'file:') {
-      throw new Error('Bootstrap Select Country Data must be loaded over http:// or https://. Please serve this demo from a local web server instead of opening the file directly.');
-    }
-
-    if (typeof XMLHttpRequest === 'undefined') {
-      throw new Error('Unable to load ' + fileName + ' from dist/json because XMLHttpRequest is unavailable. Preload window.BsCountryDataData before calling this library in the browser.');
-    }
-
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', resolveJsonUrl(fileName), false);
-    xhr.send(null);
-
-    if (xhr.status < 200 || xhr.status >= 300) {
-      throw new Error('Unable to load ' + fileName + ' from dist/json');
-    }
-
-    return JSON.parse(xhr.responseText);
-  }
 
   function ensureData() {
     if (data.countries.length || data.timezones.length || data.usStates.length || data.ukCounties.length) {
@@ -113,30 +66,6 @@
       data.usStates = globalData.usStates || [];
       data.ukCounties = globalData.ukCounties || [];
       return data;
-    }
-
-    if (countriesData.length) {
-      data.countries = countriesData;
-    } else {
-      data.countries = loadJsonFile('bscd-countries.json');
-    }
-
-    if (timezonesData.length) {
-      data.timezones = timezonesData;
-    } else {
-      data.timezones = loadJsonFile('bscd-timezones.json');
-    }
-
-    if (usStatesData.length) {
-      data.usStates = usStatesData;
-    } else {
-      data.usStates = loadJsonFile('bscd-usa-states.json');
-    }
-
-    if (ukCountiesData.length) {
-      data.ukCounties = ukCountiesData;
-    } else {
-      data.ukCounties = loadJsonFile('bscd-uk-counties.json');
     }
 
     return data;

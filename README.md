@@ -1,15 +1,20 @@
 # Bootstrap Select Country Data
 
-A Bootstrap-powered data extension for `bootstrap-select` that provides ready-to-use option sets for:
+A lightweight Bootstrap Select data helper for countries, phone codes, languages, time zones, US states, and UK counties.
 
-- Countries
-- Country phone codes
-- Languages
-- Timezones
-- UK counties
-- US states
+This package ships with a compiled runtime bundle that embeds the data directly, so a single script can be dropped into a page without relying on a separate JSON fetch step.
 
-It piggybacks directly on the Bootstrap 5 and bootstrap-select UI stack and supports optional region grouping and flag rendering.
+## Features
+
+- Country option data with optional flag rendering
+- Country phone code options
+- Language option data
+- Timezone options
+- US state data
+- UK county data
+- Optional region grouping for supported datasets
+- Include/exclude filtering helpers
+- Bootstrap Select friendly option objects
 
 ## Installation
 
@@ -17,27 +22,46 @@ It piggybacks directly on the Bootstrap 5 and bootstrap-select UI stack and supp
 npm install @trilbdev/boostrap-select-country-data
 ```
 
-This package installs the required dependencies automatically:
+## Package layout
 
-- `bootstrap`
-- `bootstrap-select`
-- `flag-icons`
+The repository now follows a cleaner structure:
 
-## Basic usage
+- `src/` contains the source code and data files
+- `build/` contains the build scripts
+- `dist/` contains the generated browser bundles and CSS assets
+
+## Quick start
+
+### Browser usage
 
 ```html
-<select
-  class="selectpicker"
-  data-live-search="true"
-  data-bscd-type="country"
-  data-bscd-group="true"
-  data-bscd-flags="true"
->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css">
+<link rel="stylesheet" href="./dist/css/bs-country-data.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js"></script>
+<script src="./dist/js/bs-country-data.min.js"></script>
+
+<select class="selectpicker" data-live-search="true" data-bscd-type="country" data-bscd-group="true" data-bscd-flags="true">
   <option value="">Select a country</option>
 </select>
 ```
 
-This will populate the select with country items, grouped by region and rendered with flag icons.
+The script will populate matching selects automatically when they contain a `data-bscd-type` attribute.
+
+### Node/CommonJS usage
+
+```js
+const bsData = require('@trilbdev/boostrap-select-country-data');
+
+const countries = bsData.countries({
+  groupByRegion: true,
+  includeFlags: true,
+});
+
+console.log(countries[0]);
+```
 
 ## Supported data types
 
@@ -50,7 +74,7 @@ The `data-bscd-type` attribute accepts:
 - `uk-counties`
 - `us-states`
 
-## Supported flags and grouping
+## Flags and grouping
 
 ### `data-bscd-flags`
 
@@ -63,25 +87,6 @@ The `data-bscd-type` attribute accepts:
 - Accepts: `true` or `false`
 - Default: `false`
 - Supported with: `country`, `country-phone`, `timezones`, `uk-counties`
-
-## Bootstrap Select integration
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/css/bootstrap-select.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.18/dist/js/bootstrap-select.min.js"></script>
-<script src="./dist/js/bs-country-data.js"></script>
-```
-
-```html
-<select class="selectpicker" data-live-search="true" data-bscd-type="country" data-bscd-group="true" data-bscd-flags="true">
-  <option value="">Select a country</option>
-</select>
-```
-
-The script will automatically populate matching selects when they have `data-bscd-type` present.
 
 ## JavaScript API
 
@@ -106,9 +111,7 @@ const states = bsData.usStates({ groupByRegion: true });
 const counties = bsData.ukCounties({ groupByRegion: true });
 ```
 
-## Filtering with include and exclude
-
-The library supports optional filtering via `include` and `exclude` groups. This is useful when you want to limit a dataset to a specific region, language, country, or county set.
+## Filtering
 
 ```js
 const europeOnly = bsData.countries({
@@ -159,6 +162,58 @@ const nonEuropeanCountries = bsData.countries({
 - `states` / `state`
 - `alpha2`
 - `phoneCodes` / `phoneCode`
+
+## SCSS usage
+
+If you are compiling styles in your own project, you can import the package SCSS directly instead of loading the generated CSS bundle:
+
+```scss
+@use "@trilbdev/boostrap-select-country-data/src/scss/bs-country-data";
+```
+
+If your bundler resolves node_modules paths differently, you can also do this:
+
+```scss
+@use "node_modules/@trilbdev/boostrap-select-country-data/src/scss/bs-country-data";
+```
+
+You can override the default Sass variables when needed:
+
+```scss
+@use "@trilbdev/boostrap-select-country-data/src/scss/bs-country-data" with (
+  // Override path to flags directory
+  $flag-icons-path: "./src/dist/images/flags",
+
+  // Include only specific country flags
+  $flag-icons-included-countries: ("gr", "de", "gb")
+);
+```
+
+Full variable list:
+
+```scss
+$flag-icons-path: "../images/flags" !default;
+$flag-icons-rect-path: "/4x3" !default;
+$flag-icons-square-path: "/1x1" !default;
+$flag-icons-use-square: false !default;
+$flag-icons-included-countries: ("gr", "de", "gb") !default;
+```
+
+## Build output
+
+The package builds a self-contained browser bundle and CSS output into the `dist/` directory:
+
+- `dist/js/bs-country-data.js`
+- `dist/js/bs-country-data.min.js`
+- `dist/css/bs-country-data.css`
+- `dist/css/bs-country-data.min.css`
+- `dist/images/flags/`
+
+The generated JS bundle embeds the country data payload so it does not require a separate JSON fetch at runtime.
+
+## Credits
+
+This project uses flag assets from [lipis/flag-icons](https://github.com/lipis/flag-icons), which provides the SVG flag set and CSS helpers used by this package.
 
 ## Notes
 

@@ -1,0 +1,7 @@
+@use "flag-icons/sass/flag-icons"with (
+
+  $flag-icons-path: "../images/flags",
+  $flag-icons-use-square: false
+
+);
+@use "core";
