@@ -21,6 +21,10 @@
       "default": "./index.js"
     }
   },
+  "publishConfig": {
+    "@trilbdev:registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "files": [
     "index.js",
     "src/js/*.js",
