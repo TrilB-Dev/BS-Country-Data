@@ -1,6 +1,6 @@
 {
   "name": "@trilbdev/boostrap-select-country-data",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Bootstrap Select data helpers for countries, languages, timezones, US states, and UK counties with optional grouping and flag icons.",
   "homepage": "https://github.com/TrilB-Dev/BS-Country-Data#readme",
   "bugs": {
