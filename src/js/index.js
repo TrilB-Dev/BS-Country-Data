@@ -25,13 +25,13 @@
  * @typedef {Object.<string, Array<any>>} GroupedOptions
  */
 
-(function (root, factory) {
+((root, factory) => {
   if (typeof module === 'object' && module.exports) {
     module.exports = factory();
   } else {
     root.BsCountryData = factory();
   }
-})(typeof self !== 'undefined' ? self : this, function () {
+})(typeof self !== 'undefined' ? self : this, () => {
   const embeddedData = typeof __BSCountryDataEmbeddedData !== 'undefined' ? __BSCountryDataEmbeddedData : null;
   let countriesData = [];
   let timezonesData = [];
@@ -54,7 +54,7 @@
 
   const defaultFlagBase = 'https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.5.0/flags/4x3';
 
-  function ensureData() {
+  const ensureData = () => {
     if (data.countries.length || data.timezones.length || data.usStates.length || data.ukCounties.length) {
       return data;
     }
@@ -69,7 +69,7 @@
     }
 
     return data;
-  }
+  };
 
   const data = {
     countries: countriesData,
@@ -78,26 +78,22 @@
     ukCounties: ukCountiesData,
   };
 
-  function normalizeFlagCode(flag) {
-    return String(flag || '').trim().toLowerCase();
-  }
+  const normalizeFlagCode = (flag) => String(flag || '').trim().toLowerCase();
 
-  function getFlagUrl(flag) {
+  const getFlagUrl = (flag) => {
     const code = normalizeFlagCode(flag);
     if (!code) return null;
     return `${defaultFlagBase}/${code}.svg`;
-  }
+  };
 
-  function toSelectOption(value, label, extra = {}) {
-    return {
-      value,
-      label,
-      text: label,
-      ...extra,
-    };
-  }
+  const toSelectOption = (value, label, extra = {}) => ({
+    value,
+    label,
+    text: label,
+    ...extra,
+  });
 
-  function flattenGroupedOptions(value) {
+  const flattenGroupedOptions = (value) => {
     if (Array.isArray(value)) {
       return value;
     }
@@ -118,9 +114,9 @@
 
       return all;
     }, []);
-  }
+  };
 
-  function normalizeFilterList(value) {
+  const normalizeFilterList = (value) => {
     if (value === null || value === undefined) {
       return [];
     }
@@ -134,13 +130,11 @@
     }
 
     return [String(value).trim()].filter(Boolean);
-  }
+  };
 
-  function normalizeFilterText(value) {
-    return String(value ?? '').trim().toLowerCase();
-  }
+  const normalizeFilterText = (value) => String(value ?? '').trim().toLowerCase();
 
-  function collectStringValues(value) {
+  const collectStringValues = (value) => {
     if (value === null || value === undefined) {
       return [];
     }
@@ -154,9 +148,9 @@
     }
 
     return [String(value)];
-  }
+  };
 
-  function matchesFilterSelection(item, filterGroup) {
+  const matchesFilterSelection = (item, filterGroup) => {
     const entries = Object.entries(filterGroup || {}).filter(([key]) => key !== 'action');
     if (!entries.length) {
       return false;
@@ -226,41 +220,39 @@
     });
   }
 
-  function applyFilterGroup(items, group) {
+  const applyFilterGroup = (items, group) => {
     if (!group || typeof group !== 'object') {
       return items;
     }
 
     return items.filter((item) => matchesFilterSelection(item, group));
-  }
+  };
 
-  function buildFilterGroup(action) {
-    return {
-      countries: (values) => ({ action, countries: values }),
-      country: (values) => ({ action, countries: values }),
-      names: (values) => ({ action, names: values }),
-      alpha2: (values) => ({ action, alpha2: values }),
-      alpha2Codes: (values) => ({ action, alpha2: values }),
-      regions: (values) => ({ action, regions: values }),
-      region: (values) => ({ action, regions: values }),
-      language: (values) => ({ action, languages: values }),
-      languages: (values) => ({ action, languages: values }),
-      languageCodes: (values) => ({ action, languageCodes: values }),
-      phoneCodes: (values) => ({ action, phoneCodes: values }),
-      phoneCode: (values) => ({ action, phoneCodes: values }),
-      timezones: (values) => ({ action, timezones: values }),
-      timezone: (values) => ({ action, timezones: values }),
-      counties: (values) => ({ action, counties: values }),
-      county: (values) => ({ action, counties: values }),
-      states: (values) => ({ action, states: values }),
-      state: (values) => ({ action, states: values }),
-    };
-  }
+  const buildFilterGroup = (action) => ({
+    countries: (values) => ({ action, countries: values }),
+    country: (values) => ({ action, countries: values }),
+    names: (values) => ({ action, names: values }),
+    alpha2: (values) => ({ action, alpha2: values }),
+    alpha2Codes: (values) => ({ action, alpha2: values }),
+    regions: (values) => ({ action, regions: values }),
+    region: (values) => ({ action, regions: values }),
+    language: (values) => ({ action, languages: values }),
+    languages: (values) => ({ action, languages: values }),
+    languageCodes: (values) => ({ action, languageCodes: values }),
+    phoneCodes: (values) => ({ action, phoneCodes: values }),
+    phoneCode: (values) => ({ action, phoneCodes: values }),
+    timezones: (values) => ({ action, timezones: values }),
+    timezone: (values) => ({ action, timezones: values }),
+    counties: (values) => ({ action, counties: values }),
+    county: (values) => ({ action, counties: values }),
+    states: (values) => ({ action, states: values }),
+    state: (values) => ({ action, states: values }),
+  });
 
   const include = buildFilterGroup('include');
   const exclude = buildFilterGroup('exclude');
 
-  function normalizeFilterConfig(config = {}) {
+  const normalizeFilterConfig = (config = {}) => {
     const includeGroup = config.include || config.includes || {};
     const excludeGroup = config.exclude || config.excludes || {};
 
@@ -268,9 +260,9 @@
       include: includeGroup && typeof includeGroup === 'object' ? includeGroup : {},
       exclude: excludeGroup && typeof excludeGroup === 'object' ? excludeGroup : {},
     };
-  }
+  };
 
-  function applySelectionFilters(items, config = {}) {
+  const applySelectionFilters = (items, config = {}) => {
     const { include: includeGroup, exclude: excludeGroup } = normalizeFilterConfig(config);
 
     let filtered = items;
@@ -284,9 +276,9 @@
     }
 
     return filtered;
-  }
+  };
 
-  function buildCountryData(options = {}) {
+  const buildCountryData = (options = {}) => {
     const {
       groupByRegion = false,
       includeFlags = false,
@@ -342,7 +334,7 @@
     }, {});
   }
 
-  function resolveLanguageEntries(languageValue, fallbackCountryName, fallbackCountryCode) {
+  const resolveLanguageEntries = (languageValue, fallbackCountryName, fallbackCountryCode) => {
     if (!languageValue && languageValue !== '') {
       return [{ name: fallbackCountryName, code: fallbackCountryCode || fallbackCountryName }];
     }
@@ -371,9 +363,9 @@
     }
 
     return [{ name: fallbackCountryName, code: fallbackCountryCode || fallbackCountryName }];
-  }
+  };
 
-  function buildCountryLanguageData(options = {}) {
+  const buildCountryLanguageData = (options = {}) => {
     const { groupByRegion = false, includeFlags = false } = options;
     const dataset = ensureData();
 
@@ -414,7 +406,7 @@
     }, {});
   }
 
-  function parseTimezoneOffsetMinutes(value) {
+  const parseTimezoneOffsetMinutes = (value) => {
     if (value === null || value === undefined || value === '') {
       return Number.MAX_SAFE_INTEGER;
     }
@@ -430,22 +422,20 @@
     const hours = Number(match[2]) || 0;
     const minutes = Number(match[3]) || 0;
     return sign * (hours * 60 + minutes);
-  }
+  };
 
-  function sortTimezoneItems(items) {
-    return [...items].sort((left, right) => {
-      const leftOffset = parseTimezoneOffsetMinutes(left.standardOffset || left.offset || left.text || left.value);
-      const rightOffset = parseTimezoneOffsetMinutes(right.standardOffset || right.offset || right.text || right.value);
+  const sortTimezoneItems = (items) => [...items].sort((left, right) => {
+    const leftOffset = parseTimezoneOffsetMinutes(left.standardOffset || left.offset || left.text || left.value);
+    const rightOffset = parseTimezoneOffsetMinutes(right.standardOffset || right.offset || right.text || right.value);
 
-      if (leftOffset !== rightOffset) {
-        return leftOffset - rightOffset;
-      }
+    if (leftOffset !== rightOffset) {
+      return leftOffset - rightOffset;
+    }
 
-      return String(left.label || left.text || left.value).localeCompare(String(right.label || right.text || right.value));
-    });
-  }
+    return String(left.label || left.text || left.value).localeCompare(String(right.label || right.text || right.value));
+  });
 
-  function buildTimezoneData(options = {}) {
+  const buildTimezoneData = (options = {}) => {
     const { groupByContinent = false } = options;
     const dataset = ensureData();
 
@@ -481,7 +471,7 @@
     return grouped;
   }
 
-  function buildUsStatesData(options = {}) {
+  const buildUsStatesData = (options = {}) => {
     const { groupByRegion = false } = options;
     const dataset = ensureData();
 
@@ -496,9 +486,9 @@
     }
 
     return { 'US States': items };
-  }
+  };
 
-  function buildUkCountyData(options = {}) {
+  const buildUkCountyData = (options = {}) => {
     const { groupByRegion = false } = options;
     const dataset = ensureData();
     const flatItems = [];
@@ -563,11 +553,9 @@
     return groupedItems;
   }
 
-  function normalizeType(type) {
-    return String(type || '').trim().toLowerCase();
-  }
+  const normalizeType = (type) => String(type || '').trim().toLowerCase();
 
-  function parseBoolean(value, fallback = false) {
+  const parseBoolean = (value, fallback = false) => {
     if (typeof value === 'boolean') return value;
     if (typeof value === 'string') {
       const normalized = value.trim().toLowerCase();
@@ -575,9 +563,9 @@
       if (['0', 'false', 'no', 'off', ''].includes(normalized)) return false;
     }
     return fallback;
-  }
+  };
 
-  function resolveDataSet(type, options = {}) {
+  const resolveDataSet = (type, options = {}) => {
     const normalizedType = normalizeType(type);
 
     switch (normalizedType) {
@@ -614,7 +602,26 @@
     }
   }
 
-  function applySelectData(selectElement, options = {}) {
+  const ensureSelectpickerInstance = (selectElement) => {
+    if (typeof window === 'undefined' || !window.Selectpicker || typeof window.Selectpicker.getOrCreateInstance !== 'function') {
+      return null;
+    }
+
+    const hasSelectpickerClass = !!(selectElement && selectElement.classList && selectElement.classList.contains('selectpicker'));
+    const hasBootstrapSelectWrapper = !!(selectElement && selectElement.parentElement && selectElement.parentElement.classList && selectElement.parentElement.classList.contains('bootstrap-select'));
+
+    if (!hasSelectpickerClass && !hasBootstrapSelectWrapper) {
+      return null;
+    }
+
+    try {
+      return window.Selectpicker.getOrCreateInstance(selectElement);
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const applySelectData = (selectElement, options = {}) => {
     if (!selectElement || !selectElement.tagName || selectElement.tagName.toLowerCase() !== 'select') {
       return selectElement;
     }
@@ -692,35 +699,44 @@
       });
     }
 
-    if (typeof window !== 'undefined' && window.Selectpicker && typeof window.Selectpicker.getOrCreateInstance === 'function') {
-      const instance = window.Selectpicker.getOrCreateInstance(selectElement, {
-        liveSearch: selectElement.getAttribute('data-live-search') === 'true',
-        actionsBox: selectElement.hasAttribute('multiple') && selectElement.getAttribute('data-actions-box') === 'true',
-        selectedTextFormat: selectElement.getAttribute('data-selected-text-format') || 'values',
-        showTick: selectElement.classList.contains('show-tick'),
-      });
+    const instance = ensureSelectpickerInstance(selectElement) || (typeof window !== 'undefined' && window.Selectpicker && typeof window.Selectpicker.getOrCreateInstance === 'function'
+      ? window.Selectpicker.getOrCreateInstance(selectElement, {
+          liveSearch: selectElement.getAttribute('data-live-search') === 'true',
+          actionsBox: selectElement.hasAttribute('multiple') && selectElement.getAttribute('data-actions-box') === 'true',
+          selectedTextFormat: selectElement.getAttribute('data-selected-text-format') || 'values',
+          showTick: selectElement.classList.contains('show-tick'),
+        })
+      : null);
 
-      if (instance && typeof instance.refresh === 'function') {
-        instance.refresh();
-      }
+    if (instance && typeof instance.refresh === 'function') {
+      instance.refresh();
     }
 
     return selectElement;
   }
 
-  function autoPopulateSelects(root = document) {
-    if (!root || !root.querySelectorAll) return [];
+  const autoPopulateSelects = (root = (typeof document !== 'undefined' ? document : null)) => {
+    if (typeof document === 'undefined' && (!root || !root.querySelectorAll)) {
+      return [];
+    }
 
     const selects = Array.from(root.querySelectorAll('select[data-bscd-type]'));
     selects.forEach((element) => {
-      if (element.closest('.bootstrap-select')) {
+      const hasSelectpickerClass = !!(element.classList && element.classList.contains('selectpicker'));
+      const hasBootstrapSelectWrapper = !!(element.parentElement && element.parentElement.classList && element.parentElement.classList.contains('bootstrap-select'));
+
+      if (element.dataset && element.dataset.bscdInitialized === 'true' && !hasSelectpickerClass && !hasBootstrapSelectWrapper) {
         return;
       }
 
       applySelectData(element);
+
+      if (element.dataset) {
+        element.dataset.bscdInitialized = 'true';
+      }
     });
     return selects;
-  }
+  };
 
   const api = {
     countries: buildCountryData,

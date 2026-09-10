@@ -57,10 +57,25 @@
         <div class="demo-card">
           <h2>Countries with flags & grouping</h2>
           <select
-            data-live-search="true"
-            data-bscd-type="country"
-            data-bscd-group="true"
-            data-bscd-flags="true"
+            id="licencepress-general-country" 
+            data-icons-base="fa-solid" 
+            data-tick-icon="fa-check" 
+            data-live-search="true" 
+            data-show-selected-tags="true" 
+            data-open-options="false" 
+            data-dropup-auto="true" 
+            data-live-search-placeholder="Select Country" 
+            data-open-options-text="Create &quot;{0}&quot;" 
+            data-selected-text-format="count" 
+            data-selected-items-style="tags" 
+            data-selected-tag-remove-label="Remove" 
+            data-placeholder="Select Country" 
+            data-width="100%" 
+            data-bscd-type="country" 
+            data-bscd-group="true" 
+            data-bscd-flags="true" 
+            class="selectpicker"
+            name="licencepress_general[country]"
           >
             <option value="">Select a country</option>
           </select>
@@ -75,6 +90,7 @@
             data-selected-text-format="count > 3"
             data-bscd-type="country"
             data-bscd-flags="true"
+            class="selectpicker"
           >
             <option value="">Select countries</option>
           </select>
