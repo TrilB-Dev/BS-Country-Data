@@ -47,7 +47,8 @@
     "login:gh": "npm login --scope=@trilbdev --registry=https://npm.pkg.github.com",
     "login:npm": "npm login",
     "publish:gh": "npm run build && npm test && npm publish --registry=https://npm.pkg.github.com --access public",
-    "publish:npm": "npm run build && npm test && npm publish --registry=https://registry.npmjs.org --access public"
+    "publish:npm": "npm run build && npm test && npm publish --registry=https://registry.npmjs.org --access public",
+    "publish": "npm publish --access=public"
   },
   "dependencies": {
     "@crestapps/bootstrap-select": "^1.2.4",
