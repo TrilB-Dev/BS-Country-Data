@@ -28,7 +28,8 @@
     "src/json/*.json",
     "dist/**/*",
     "src/scss/**/*",
-    "README.md"
+    "README.md",
+    "LICENSE.txt"
   ],
   "keywords": [
     "bootstrap-select",
