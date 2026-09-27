@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.0.5
+
+### Added
+- Support for setting selected values via the `data-bscd-selected` attribute for both single and multi-select inputs.
+- Improved selectpicker initialization so preset values are applied after the plugin is initialized.
+- Updated the demo page to showcase the default selected-value behavior.
+
+### Fixed
+- Corrected package metadata and publish script consistency for the npm release workflow.
+- Included the MIT license file in the published npm package contents.
+- Added missing project licensing files for a complete package release.
+
+## 1.0.4
+
+### Changed
+- Refined the country selection UI and improved bootstrap-select integration.
+- Updated the demo behavior and selection logic for more consistent picker interactions.
+
+## 1.0.3
+
+### Changed
+- Cleaned up the npm publishing configuration and aligned the package metadata for release consistency.
+- Simplified workflow and publish script configuration for easier package release management.
+
 ## 1.0.2
 
 ### Changed
