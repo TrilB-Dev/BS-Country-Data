@@ -48,7 +48,15 @@ The repository now follows a cleaner structure:
 </select>
 ```
 
-The script will populate matching selects automatically when they contain a `data-bscd-type` attribute.
+The script will populate matching selects automatically when they contain a `data-bscd-type` attribute. If you include a `data-bscd-selected` value, matching option values are marked as selected after the list is populated.
+
+```html
+<select class="selectpicker" data-bscd-type="country" data-bscd-selected="GB"></select>
+```
+
+```html
+<select class="selectpicker" multiple data-bscd-type="country" data-bscd-selected="US,GB,CA"></select>
+```
 
 ### Node/CommonJS usage
 
@@ -87,6 +95,12 @@ The `data-bscd-type` attribute accepts:
 - Accepts: `true` or `false`
 - Default: `false`
 - Supported with: `country`, `country-phone`, `timezones`, `uk-counties`
+
+### `data-bscd-selected`
+
+- Accepts: a single value or a comma/space-delimited list of option values
+- Example: `data-bscd-selected="US,GB"`
+- Applied after the dataset is generated so the option values match the loaded data
 
 ## JavaScript API
 

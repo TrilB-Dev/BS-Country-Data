@@ -622,6 +622,22 @@ const __BSCountryDataEmbeddedData = {"countries":[{"name":"Afghanistan","codes":
     }
   };
 
+  const getSelectedOptionValues = (selectElement) => {
+    if (!selectElement || !selectElement.getAttribute) {
+      return [];
+    }
+
+    const value = selectElement.getAttribute('data-bscd-selected');
+    if (value === null || value === undefined) {
+      return [];
+    }
+
+    return String(value)
+      .split(/[\s,]+/)
+      .map((item) => String(item).trim())
+      .filter(Boolean);
+  };
+
   const applySelectData = (selectElement, options = {}) => {
     if (!selectElement || !selectElement.tagName || selectElement.tagName.toLowerCase() !== 'select') {
       return selectElement;
@@ -700,6 +716,21 @@ const __BSCountryDataEmbeddedData = {"countries":[{"name":"Afghanistan","codes":
       });
     }
 
+    const selectedValues = getSelectedOptionValues(selectElement);
+    const optionsNodeList = Array.from(selectElement.querySelectorAll('option'));
+    const targetValue = !selectElement.multiple && selectedValues.length ? selectedValues[0] : null;
+
+    optionsNodeList.forEach((optionNode) => {
+      const shouldSelect = selectElement.multiple
+        ? selectedValues.includes(optionNode.value)
+        : optionNode.value === targetValue;
+      optionNode.selected = shouldSelect;
+    });
+
+    if (targetValue) {
+      selectElement.value = targetValue;
+    }
+
     const instance = ensureSelectpickerInstance(selectElement) || (typeof window !== 'undefined' && window.Selectpicker && typeof window.Selectpicker.getOrCreateInstance === 'function'
       ? window.Selectpicker.getOrCreateInstance(selectElement, {
           liveSearch: selectElement.getAttribute('data-live-search') === 'true',
@@ -709,8 +740,17 @@ const __BSCountryDataEmbeddedData = {"countries":[{"name":"Afghanistan","codes":
         })
       : null);
 
-    if (instance && typeof instance.refresh === 'function') {
-      instance.refresh();
+    if (instance) {
+      if (typeof instance.val === 'function') {
+        if (targetValue) {
+          instance.val(targetValue);
+        } else if (selectElement.multiple) {
+          instance.val(selectedValues);
+        }
+      }
+      if (typeof instance.refresh === 'function') {
+        instance.refresh();
+      }
     }
 
     return selectElement;
